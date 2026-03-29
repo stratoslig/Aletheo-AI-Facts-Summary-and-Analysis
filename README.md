@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![UI Framework](https://img.shields.io/badge/UI-CustomTkinter-blueviolet.svg)
 
+*[🇬🇧 Read this in English](#aletheo-facts-summary-and-analysis-ai)*
+
 Μια ισχυρή Desktop εφαρμογή (χτισμένη με Python & CustomTkinter) που αυτοματοποιεί την αναζήτηση, το φιλτράρισμα και την ανάλυση ειδήσεων. Λειτουργεί ως ένας προηγμένος ελεγκτής γεγονότων και συλλέκτης ειδήσεων με την ισχύ της Τεχνητής Νοημοσύνης.
 
 Το Aletheo συλλέγει δεδομένα από πολλαπλές πηγές (RSS Feeds, URLs, GNews, Mediastack, NewsData.io), επιτρέπει στον χρήστη να επιμεληθεί τα πιο σχετικά άρθρα, και αξιοποιεί την Τεχνητή Νοημοσύνη (μοντέλα Cloud ή Τοπικά) για να εξάγει γεγονότα, να τα επικυρώνει και να παρέχει στοχευμένη ανάλυση.
