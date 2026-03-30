@@ -12,7 +12,7 @@
 
 ## 🌟 Κύρια Χαρακτηριστικά
 
-- **Συλλογή από Πολλαπλές Πηγές**: Αντλήστε ειδήσεις από απλά URLs , RSS feeds, και 3 διαφορετικά News APIs (GNews, Mediastack, NewsData.io).
+- **Συλλογή από Πολλαπλές Πηγές**: Αντλήστε ειδήσεις από απλά URLs (μέσω Web Scraping), RSS feeds, και 3 διαφορετικά News APIs (GNews, Mediastack, NewsData.io).
 - **Προηγμένο Φιλτράρισμα**: Φιλτράρετε άρθρα τοπικά ανά Κατηγορία, Γλώσσα (με ευρετική ανίχνευση κειμένου), Χώρα, Ημερομηνία, και Λέξεις-κλειδιά (χρησιμοποιώντας `+` για ΥΠΟΧΡΕΩΤΙΚΑ, `-` για ΟΧΙ, και `,` για Ή).
 - **Διπλή Υποστήριξη AI**: Χρησιμοποιήστε το Gemini API της Google (Cloud) για κορυφαία αποτελέσματα, ή το Ollama για τοπική εκτέλεση με έμφαση στην ιδιωτικότητα και offline λειτουργία.
 - **Μηχανισμός Fact-Checking**: Το AI ομαδοποιεί τις ειδήσεις, αφαιρεί την προκατάληψη, και παράγει μια **Εκτίμηση Εγκυρότητας (1-10)** βασισμένη στη Διασταύρωση, την Τεκμηρίωση, την Ουδετερότητα, και την Αυθεντία της Πηγής.
@@ -75,9 +75,15 @@
 ## 📜 Άδεια Χρήσης
 Αυτό το έργο αδειοδοτείται υπό την Άδεια MIT - δείτε το αρχείο LICENSE για λεπτομέρειες.
 
+## ⚖️ Νομική Σημείωση & Αποποίηση Ευθύνης
+
+Η εφαρμογή Aletheo χρησιμοποιεί τεχνικές web scraping για την άντληση περιεχομένου από ιστοσελίδες. Ο χρήστης φέρει την αποκλειστική ευθύνη να βεβαιώνεται ότι οι ιστοσελίδες που προσθέτει στη Watchlist επιτρέπουν την εξαγωγή και επεξεργασία των πληροφοριών τους. Συνιστάται ο έλεγχος του αρχείου robots.txt και των Όρων Χρήσης (Terms of Service) κάθε πηγής πριν από τη χρήση. Ο δημιουργός της εφαρμογής δεν φέρει καμία ευθύνη για τυχόν ακατάλληλη ή μη εξουσιοδοτημένη χρήση του περιεχομένου τρίτων.
+
 ---
 
 # Aletheo: Facts Summary and Analysis AI
+
+*[🇬🇷 Διαβάστε το στα Ελληνικά](#aletheo-σύνοψη--ανάλυση-γεγονότων-με-ai)*
 
 A powerful Desktop application (built with Python & CustomTkinter) that automates the search, filtering, and analysis of news. It acts as an advanced AI-powered fact-checker and aggregator.
 
@@ -85,7 +91,7 @@ Aletheo gathers data from multiple sources (RSS Feeds, URLs, GNews, Mediastack, 
 
 ## 🌟 Key Features
 
-- **Multi-Source Aggregation**: Fetch news from raw URLs , RSS feeds, and 3 distinct News APIs (GNews, Mediastack, NewsData.io).
+- **Multi-Source Aggregation**: Fetch news from raw URLs (via Web Scraping), RSS feeds, and 3 distinct News APIs (GNews, Mediastack, NewsData.io).
 - **Advanced Filtering**: Filter articles locally by Category, Language (with heuristic text detection), Country, Date, and Keywords (using `+` for MUST, `-` for NOT, and `,` for OR).
 - **Dual AI Support**: Use Google's Gemini API (Cloud) for top-tier results, or Ollama for local, privacy-first, offline execution.
 - **Fact-Checking Engine**: The AI groups the news, strips out bias, and generates a **Validity Estimate (1-10)** based on Cross-referencing, Documentation, Neutrality, and Source Authority.
@@ -147,3 +153,7 @@ The User Interface and AI Prompting Engine fully support **English** and **Greek
 
 ## 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## ⚖️ Legal Disclaimer
+
+Aletheo utilizes web scraping techniques to fetch content from websites. It is the user's sole responsibility to ensure that the websites added to the Watchlist allow data extraction and processing. We recommend checking the robots.txt file and the Terms of Service of each source before use. The developer of this application bears no responsibility for any improper or unauthorized use of third-party content.
