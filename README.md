@@ -12,7 +12,7 @@
 
 ## 🌟 Κύρια Χαρακτηριστικά
 
-- **Συλλογή από Πολλαπλές Πηγές**: Αντλήστε ειδήσεις από απλά URLs (μέσω Web Scraping), RSS feeds, και 3 διαφορετικά News APIs (GNews, Mediastack, NewsData.io).
+- **Συλλογή από Πολλαπλές Πηγές**: Αντλήστε ειδήσεις από απλά URLs , RSS feeds, και 3 διαφορετικά News APIs (GNews, Mediastack, NewsData.io).
 - **Προηγμένο Φιλτράρισμα**: Φιλτράρετε άρθρα τοπικά ανά Κατηγορία, Γλώσσα (με ευρετική ανίχνευση κειμένου), Χώρα, Ημερομηνία, και Λέξεις-κλειδιά (χρησιμοποιώντας `+` για ΥΠΟΧΡΕΩΤΙΚΑ, `-` για ΟΧΙ, και `,` για Ή).
 - **Διπλή Υποστήριξη AI**: Χρησιμοποιήστε το Gemini API της Google (Cloud) για κορυφαία αποτελέσματα, ή το Ollama για τοπική εκτέλεση με έμφαση στην ιδιωτικότητα και offline λειτουργία.
 - **Μηχανισμός Fact-Checking**: Το AI ομαδοποιεί τις ειδήσεις, αφαιρεί την προκατάληψη, και παράγει μια **Εκτίμηση Εγκυρότητας (1-10)** βασισμένη στη Διασταύρωση, την Τεκμηρίωση, την Ουδετερότητα, και την Αυθεντία της Πηγής.
@@ -85,7 +85,7 @@ Aletheo gathers data from multiple sources (RSS Feeds, URLs, GNews, Mediastack, 
 
 ## 🌟 Key Features
 
-- **Multi-Source Aggregation**: Fetch news from raw URLs (via Web Scraping), RSS feeds, and 3 distinct News APIs (GNews, Mediastack, NewsData.io).
+- **Multi-Source Aggregation**: Fetch news from raw URLs , RSS feeds, and 3 distinct News APIs (GNews, Mediastack, NewsData.io).
 - **Advanced Filtering**: Filter articles locally by Category, Language (with heuristic text detection), Country, Date, and Keywords (using `+` for MUST, `-` for NOT, and `,` for OR).
 - **Dual AI Support**: Use Google's Gemini API (Cloud) for top-tier results, or Ollama for local, privacy-first, offline execution.
 - **Fact-Checking Engine**: The AI groups the news, strips out bias, and generates a **Validity Estimate (1-10)** based on Cross-referencing, Documentation, Neutrality, and Source Authority.
