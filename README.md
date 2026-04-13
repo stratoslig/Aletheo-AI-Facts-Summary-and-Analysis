@@ -44,30 +44,33 @@
 
 ## 🛠️ Απαιτήσεις Εγκατάστασης
 
-1. **Python 3.8+**
-2. Κλωνοποιήστε το αποθετήριο:
-   ```bash
-   git clone https://github.com/stratoslig/Aletheo-Facts-Summary-and-Analysis-AI.git
-   cd Aletheo-Facts-Summary-and-Analysis-AI
-   ```
-3. Εγκαταστήστε τις απαιτούμενες εξαρτήσεις:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(Βεβαιωθείτε ότι έχετε εγκαταστήσει βιβλιοθήκες όπως `customtkinter`, `google-genai`, `ollama`, `feedparser`, `cloudscraper`, `beautifulsoup4`, `python-docx`, `reportlab`, `pillow`).*
+1. ΠΡΟΥΠΟΘΕΣΕΙΣ ΛΕΙΤΟΥΡΓΙΑΣ
+-----------------------------------------------------------
+Η εφαρμογή είναι αυτόνομη (δεν απαιτεί εγκατάσταση προγραμμάτων).
+Ωστόσο, για να μπορέσει να αναζητήσει ειδήσεις και να παράγει
+κείμενα, βασίζεται σε πηγές δεδομένων και κλειδιά API:
 
-## 🚀 Γρήγορη Εκκίνηση
+- Google Gemini (Για το AI): Δωρεάν κλειδί από το Google AI Studio.
+- Εισαγωγή Ιστοσελίδων / RSS: Μπορείτε να προσθέσετε απευθείας 
+  τα URLs (συνδέσμους) από τις αγαπημένες σας ιστοσελίδες ή RSS feeds.
+- GNews, Mediastack, NewsData.io: (Προαιρετικά) Δωρεάν κλειδιά από 
+  τις αντίστοιχες ιστοσελίδες τους, αν θέλετε να κάνετε απευθείας 
+  αναζητήσεις στον παγκόσμιο ιστό.
 
-1. Τρέξτε την εφαρμογή:
-   ```bash
-   python appFSA.py
-   ```
-2. **Ρυθμίστε τα API Keys σας**: Ανοίξτε την αριστερή πλαϊνή μπάρα και εισάγετε το Gemini API key σας (ή αλλάξτε σε Ollama αν το έχετε εγκαταστήσει τοπικά). Μπορείτε επίσης να προσθέσετε δωρεάν API keys για τα GNews, Mediastack, και NewsData.io. Κάντε κλικ στο **Αποθήκευση Κλειδιών**.
-3. **Προσθέστε Πηγές**: Προσθέστε μερικά RSS feeds ή απλά URLs ειδήσεων στην πλαϊνή μπάρα. Αναθέστε τους μια κατηγορία και μια Βαθμολογία Αξιοπιστίας.
-4. **Αναζήτηση**: Χρησιμοποιήστε το πάνελ "Επιλογή Πηγών" (πάνω αριστερά) για να φιλτράρετε με βάση το επιθυμητό θέμα και κάντε κλικ στο "Αναζήτηση".
-5. **Επιλογή**: Τσεκάρετε τα κουτάκια δίπλα στα άρθρα που σας ενδιαφέρουν στο δεξί πάνελ.
-6. **Ανάλυση**: Στο κάτω πάνελ, επιλέξτε σε πόσα θέματα θέλετε να ομαδοποιηθούν, επιλέξτε την εργασία (π.χ., Γεγονότα και Ανάλυση), και πατήστε **Έναρξη**.
-7. **Ιστορικό & Εξαγωγή**: Χρησιμοποιήστε το κουμπί του Ιστορικού (κάτω δεξιά) για να ανακαλέσετε παλαιότερες αναλύσεις ή τα κουμπιά εξαγωγής για να αποθηκεύσετε το αποτέλεσμα του AI σε PDF/Word!
+-----------------------------------------------------------
+2. ΠΡΩΤΗ ΕΚΚΙΝΗΣΗ & ΡΥΘΜΙΣΕΙΣ
+-----------------------------------------------------------
+1. Κάντε διπλό κλικ στο εκτελέσιμο αρχείο της εφαρμογής.
+2. Μόλις ανοίξει η εφαρμογή, κοιτάξτε στην αριστερή στήλη (Ρυθμίσεις).
+3. Στην κάρτα "API Keys", επικολλήστε τα κλειδιά που βγάλατε 
+   στο προηγούμενο βήμα.
+4. Πατήστε "Αποθήκευση Κλειδιών". (Αποθηκεύονται με ασφάλεια 
+   τοπικά στον υπολογιστή σας).
+5 **Προσθέστε Πηγές**: Προσθέστε μερικά RSS feeds ή απλά URLs ειδήσεων στην πλαϊνή μπάρα. Αναθέστε τους μια κατηγορία και μια Βαθμολογία Αξιοπιστίας.
+6. **Αναζήτηση**: Χρησιμοποιήστε το πάνελ "Επιλογή Πηγών" (πάνω αριστερά) για να φιλτράρετε με βάση το επιθυμητό θέμα και κάντε κλικ στο "Αναζήτηση".
+7. **Επιλογή**: Τσεκάρετε τα κουτάκια δίπλα στα άρθρα που σας ενδιαφέρουν στο δεξί πάνελ.
+8. **Ανάλυση**: Στο κάτω πάνελ, επιλέξτε σε πόσα θέματα θέλετε να ομαδοποιηθούν, επιλέξτε την εργασία (π.χ., Γεγονότα και Ανάλυση), και πατήστε **Έναρξη**.
+9. **Ιστορικό & Εξαγωγή**: Χρησιμοποιήστε το κουμπί του Ιστορικού (κάτω δεξιά) για να ανακαλέσετε παλαιότερες αναλύσεις ή τα κουμπιά εξαγωγής για να αποθηκεύσετε το αποτέλεσμα του AI σε PDF/Word!
 
 ## 🌍 Υποστηριζόμενες Γλώσσες
 Το περιβάλλον χρήστη και η μηχανή δημιουργίας Prompts υποστηρίζουν πλήρως **Αγγλικά** και **Ελληνικά**. Η λογική μετάφρασης μπορεί εύκολα να επεκταθεί στο `translations.py`.
@@ -138,30 +141,33 @@ Aletheo gathers data from multiple sources (RSS Feeds, URLs, GNews, Mediastack, 
 
 ## 🛠️ Installation Requirements
 
-1. **Python 3.8+**
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/stratoslig/Aletheo-Facts-Summary-and-Analysis-AI.git
-   cd Aletheo-Facts-Summary-and-Analysis-AI
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(Ensure you have libraries like `customtkinter`, `google-genai`, `ollama`, `feedparser`, `cloudscraper`, `beautifulsoup4`, `python-docx`, `reportlab`, `pillow` installed).*
+1. OPERATING REQUIREMENTS
+-----------------------------------------------------------
+The application is standalone (does not require program installation).
+However, to search for news and produce texts, it relies on 
+data sources and API keys:
 
-## 🚀 Quick Start
+- Google Gemini (For AI): Free key from Google AI Studio.
+- Website / RSS Import: You can directly add the URLs (links) 
+  from your favorite websites or RSS feeds.
+- GNews, Mediastack, NewsData.io: (Optional) Free keys from 
+  their respective websites if you want to perform direct 
+  searches on the web.
 
-1. Run the application:
-   ```bash
-   python appFSA.py
-   ```
-2. **Setup your API Keys**: Open the left sidebar and enter your Gemini API key (or switch to Ollama if installed locally). You can also add free API keys for GNews, Mediastack, and NewsData.io. Click **Save Keys**.
-3. **Add Sources**: Add some RSS feeds or regular News URLs in the sidebar. Assign them a category and a Trust Score.
-4. **Search**: Use the "Source Selection" panel (top-left) to filter by your desired topic and click "Search".
-5. **Select**: Check the boxes next to the articles you find interesting in the right panel.
-6. **Analyze**: In the bottom panel, choose how many topics you want to group them into, select the task (e.g., Facts and Analysis), and hit **Start**.
-7. **History & Export**: Use the History button (bottom right) to recall older analyses or the export buttons to save the AI's output to PDF/Word!
+-----------------------------------------------------------
+2. FIRST RUN & SETTINGS
+-----------------------------------------------------------
+1. Double-click the application's executable file.
+2. Once the application opens, look at the left column (Settings).
+3. In the "API Keys" card, paste the keys you obtained in 
+   the previous step.
+4. Click "Save Keys". (They are stored securely 
+   locally on your computer).
+4. **Add Sources**: Add some RSS feeds or regular News URLs in the sidebar. Assign them a category and a Trust Score.
+5. **Search**: Use the "Source Selection" panel (top-left) to filter by your desired topic and click "Search".
+6. **Select**: Check the boxes next to the articles you find interesting in the right panel.
+7. **Analyze**: In the bottom panel, choose how many topics you want to group them into, select the task (e.g., Facts and Analysis), and hit **Start**.
+8. **History & Export**: Use the History button (bottom right) to recall older analyses or the export buttons to save the AI's output to PDF/Word!
 
 ## 🌍 Languages Supported
 The User Interface and AI Prompting Engine fully support **English** and **Greek** out of the box. The translation logic can be easily extended in `translations.py`.
