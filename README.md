@@ -65,7 +65,7 @@
 3. Στην κάρτα "API Keys", επικολλήστε τα κλειδιά που βγάλατε 
    στο προηγούμενο βήμα.
 4. Πατήστε "Αποθήκευση Κλειδιών". (Αποθηκεύονται με ασφάλεια τοπικά στον υπολογιστή σας).
-5 **Προσθέστε Πηγές**: Προσθέστε μερικά RSS feeds ή απλά URLs ειδήσεων στην πλαϊνή μπάρα. Αναθέστε τους μια κατηγορία και μια Βαθμολογία Αξιοπιστίας.
+5. **Προσθέστε Πηγές**: Προσθέστε μερικά RSS feeds ή απλά URLs ειδήσεων στην πλαϊνή μπάρα. Αναθέστε τους μια κατηγορία και μια Βαθμολογία Αξιοπιστίας.
 6. **Αναζήτηση**: Χρησιμοποιήστε το πάνελ "Επιλογή Πηγών" (πάνω αριστερά) για να φιλτράρετε με βάση το επιθυμητό θέμα και κάντε κλικ στο "Αναζήτηση".
 7. **Επιλογή**: Τσεκάρετε τα κουτάκια δίπλα στα άρθρα που σας ενδιαφέρουν στο δεξί πάνελ.
 8. **Ανάλυση**: Στο κάτω πάνελ, επιλέξτε σε πόσα θέματα θέλετε να ομαδοποιηθούν, επιλέξτε την εργασία (π.χ., Γεγονότα και Ανάλυση), και πατήστε **Έναρξη**.
@@ -162,11 +162,11 @@ data sources and API keys:
    the previous step.
 4. Click "Save Keys". (They are stored securely 
    locally on your computer).
-4. **Add Sources**: Add some RSS feeds or regular News URLs in the sidebar. Assign them a category and a Trust Score.
-5. **Search**: Use the "Source Selection" panel (top-left) to filter by your desired topic and click "Search".
-6. **Select**: Check the boxes next to the articles you find interesting in the right panel.
-7. **Analyze**: In the bottom panel, choose how many topics you want to group them into, select the task (e.g., Facts and Analysis), and hit **Start**.
-8. **History & Export**: Use the History button (bottom right) to recall older analyses or the export buttons to save the AI's output to PDF/Word!
+5. **Add Sources**: Add some RSS feeds or regular News URLs in the sidebar. Assign them a category and a Trust Score.
+6. **Search**: Use the "Source Selection" panel (top-left) to filter by your desired topic and click "Search".
+7. **Select**: Check the boxes next to the articles you find interesting in the right panel.
+8. **Analyze**: In the bottom panel, choose how many topics you want to group them into, select the task (e.g., Facts and Analysis), and hit **Start**.
+9. **History & Export**: Use the History button (bottom right) to recall older analyses or the export buttons to save the AI's output to PDF/Word!
 
 ## 🌍 Languages Supported
 The User Interface and AI Prompting Engine fully support **English** and **Greek** out of the box. The translation logic can be easily extended in `translations.py`.
