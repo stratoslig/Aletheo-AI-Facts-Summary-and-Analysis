@@ -1,5 +1,6 @@
 # Aletheo: Σύνοψη & Ανάλυση Γεγονότων με AI
 
+![Version](https://img.shields.io/badge/version-1.2.2-blue.svg)
 ![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![UI Framework](https://img.shields.io/badge/UI-CustomTkinter-blueviolet.svg)
@@ -10,21 +11,36 @@
 
 Το Aletheo συλλέγει δεδομένα από πολλαπλές πηγές (RSS Feeds, URLs, GNews, Mediastack, NewsData.io), επιτρέπει στον χρήστη να επιμεληθεί τα πιο σχετικά άρθρα, και αξιοποιεί την Τεχνητή Νοημοσύνη (μοντέλα Cloud ή Τοπικά) για να εξάγει γεγονότα, να τα επικυρώνει και να παρέχει στοχευμένη ανάλυση.
 
-## 🌟 Κύρια Χαρακτηριστικά
+## 🆕 Τι νέο υπάρχει στην έκδοση 1.2.2
+- **Κριτήριο Αληθοφάνειας:** Η Εκτίμηση Εγκυρότητας και η Εκτίμηση Ιστοσελίδας αξιολογούν πλέον την αληθοφάνεια των ισχυρισμών, μειώνοντας δραστικά τη βαθμολογία σε θεωρίες συνωμοσίας και παράλογα άρθρα.
+- **Απομόνωση Fake News:** Ειδήσεις με εγκυρότητα κάτω του 40% απομονώνονται ως ανεξάρτητα γεγονότα και αγνοούνται εντελώς από το AI κατά την παραγωγή της τελικής Σύνοψης.
+- **Οπτική Επισήμανση:** Ειδήσεις με βαθμολογία κάτω του 30% χρωματίζονται πλέον αυτόματα κόκκινες στην εφαρμογή αλλά και στις τελικές εξαγωγές Word/PDF!
+- **Βελτιώσεις:** Η προεπιλεγμένη αξιοπιστία νέων πηγών ορίστηκε στο 10 (μέγιστο) και αφαιρέθηκε η επιλογή της αυτόματης διασταύρωσης για ένα πιο καθαρό UI.
+
+## � Κύρια Χαρακτηριστικά
 
 - **Συλλογή από Πολλαπλές Πηγές**: Αντλήστε ειδήσεις από απλά URLs (μέσω Web Scraping), RSS feeds, και 3 διαφορετικά News APIs (GNews, Mediastack, NewsData.io).
 - **Προηγμένο Φιλτράρισμα**: Φιλτράρετε άρθρα τοπικά ανά Κατηγορία, Γλώσσα (με ευρετική ανίχνευση κειμένου), Χώρα, Ημερομηνία, και Λέξεις-κλειδιά (χρησιμοποιώντας `+` για ΥΠΟΧΡΕΩΤΙΚΑ, `-` για ΟΧΙ, και `,` για Ή).
 - **Διπλή Υποστήριξη AI**: Χρησιμοποιήστε το Gemini API της Google (Cloud) για κορυφαία αποτελέσματα, ή το Ollama για τοπική εκτέλεση με έμφαση στην ιδιωτικότητα και offline λειτουργία.
-- **Μηχανισμός Fact-Checking**: Το AI ομαδοποιεί τις ειδήσεις, αφαιρεί την προκατάληψη, και παράγει μια **Εκτίμηση Εγκυρότητας (1-10)** βασισμένη στη Διασταύρωση, την Τεκμηρίωση, την Ουδετερότητα, και την Αυθεντία της Πηγής.
+- **Μηχανισμός Fact-Checking**: Το AI ομαδοποιεί τις ειδήσεις, αφαιρεί την προκατάληψη, και παράγει μια **σταθμισμένη Εκτίμηση Εγκυρότητας (1-100%)** βασισμένη σε 6 κριτήρια: Διασταύρωση, Τεκμηρίωση, Ουδετερότητα, Λογική Συνοχή, Αυθεντία Πηγής και Αληθοφάνεια. Περιλαμβάνει μηχανισμό «Βέτο» για προστασία από clickbaits.
+- **Εκτίμηση Ιστοσελίδας**: Αξιολογήστε τη συνολική αξιοπιστία μίας πηγής ελέγχοντας πολλαπλά άρθρα της για Τεκμηρίωση, Ουδετερότητα, Λογική Συνοχή και Αληθοφάνεια, παράγοντας μια τελική ποσοστιαία βαθμολογία (1-100%).
+- **Απομόνωση Fake News**: Τα γεγονότα με Εκτίμηση Εγκυρότητας κάτω του 40% απομονώνονται, ενώ κάτω του 30% επισημαίνονται με κόκκινο χρώμα (και στις εξαγωγές). Η Σύνοψη τα αγνοεί αυτόματα.
 - **Βαθμολόγηση Αξιοπιστίας**: Αναθέστε τη δική σας "Βαθμολογία Αξιοπιστίας" σε κάθε RSS feed που προσθέτετε, την οποία το AI λαμβάνει αυτόματα υπόψη στην τελική του Εκτίμηση Εγκυρότητας.
+- **Εισαγωγή & Εξαγωγή OPML**: Εισάγετε και εξάγετε εύκολα τις πηγές σας από/προς άλλους RSS readers (π.χ. Feedly) με το πάτημα ενός κουμπιού.
+- **Ιστορικό (History)**: Αυτόματη τοπική αποθήκευση των 5 τελευταίων αναλύσεων με δυνατότητα ανάκτησης (φόρτωσης) και διαγραφής.
 - **Δυναμικό UI**: Ένα μοντέρνο, καθαρό και πλήρως αποκριτικό περιβάλλον χρήστη με CustomTkinter που διαθέτει:
   - Light/Dark mode support.
   - Collapsible panels for a tidy workspace.
+  - **Drag-and-Drop** υποστήριξη για την ταξινόμηση της λίστας πηγών.
+  - **Σελιδοποίηση (Pagination)**: Προβολή 20 άρθρων ανά σελίδα για ταχύτατη πλοήγηση χωρίς καθυστερήσεις.
   - **List & Card Views** for news results, including image thumbnails.
+  - Ελαφριές 3D σκιές (Drop shadows) στις κάρτες.
+  - Διαδραστικά textboxes με **Clickable Links**, παραπομπές και υποστήριξη Bold κειμένου.
+- **Τοπική Προβολή (Reader Mode)**: Διαβάστε το πλήρες κείμενο οποιουδήποτε άρθρου κατευθείαν μέσα από την εφαρμογή, χωρίς να ανοίγετε τον browser.
 - **Ακυρώσιμες Εργασίες AI**: Ένα ειδικό κουμπί "Ακύρωση" για να σταματάτε τις χρονοβόρες διαδικασίες του AI.
-- **Παραμετροποιήσιμη Έξοδος**: Ορίστε τα δικά σας όρια χαρακτήρων για τα Γεγονότα, την Ανάλυση και τη Σύνοψη.
+- **Παραμετροποιήσιμη Έξοδος**: Ορίστε τα δικά σας όρια χαρακτήρων για τα Γεγονότα, την Ανάλυση, τη Σύνοψη και το Web Scraping ανά άρθρο. 
 - **Ανατροφοδότηση σε Πραγματικό Χρόνο**: Ένας ζωντανός μετρητής δείχνει πόσα άρθρα έχουν επιλεγεί και το συνολικό πλήθος λέξεων που αποστέλλονται στο AI.
-- **Πλούσιες Επιλογές Εξαγωγής**: Εξάγετε άμεσα τα επιμελημένα γεγονότα, την ανάλυση ή τις συνόψεις σας σε **Word (.docx)**, **PDF (.pdf)**, ή απευθείας στον εκτυπωτή σας.
+- **Πλούσιες Επιλογές Εξαγωγής**: Εξάγετε άμεσα τα επιμελημένα γεγονότα, την ανάλυση ή τις συνόψεις σας σε **Word (.docx)**, **PDF (.pdf)**, ή απευθείας στον εκτυπωτή σας. Οι εξαγωγές διατηρούν τα Clickable links και τις παραπομπές.
 
 ## 🛠️ Απαιτήσεις Εγκατάστασης
 
@@ -51,7 +67,7 @@
 4. **Αναζήτηση**: Χρησιμοποιήστε το πάνελ "Επιλογή Πηγών" (πάνω αριστερά) για να φιλτράρετε με βάση το επιθυμητό θέμα και κάντε κλικ στο "Αναζήτηση".
 5. **Επιλογή**: Τσεκάρετε τα κουτάκια δίπλα στα άρθρα που σας ενδιαφέρουν στο δεξί πάνελ.
 6. **Ανάλυση**: Στο κάτω πάνελ, επιλέξτε σε πόσα θέματα θέλετε να ομαδοποιηθούν, επιλέξτε την εργασία (π.χ., Γεγονότα και Ανάλυση), και πατήστε **Έναρξη**.
-7. **Εξαγωγή**: Χρησιμοποιήστε τα κουμπιά κάτω δεξιά για να αποθηκεύσετε το αποτέλεσμα του AI σε PDF ή Word!
+7. **Ιστορικό & Εξαγωγή**: Χρησιμοποιήστε το κουμπί του Ιστορικού (κάτω δεξιά) για να ανακαλέσετε παλαιότερες αναλύσεις ή τα κουμπιά εξαγωγής για να αποθηκεύσετε το αποτέλεσμα του AI σε PDF/Word!
 
 ## 🌍 Υποστηριζόμενες Γλώσσες
 Το περιβάλλον χρήστη και η μηχανή δημιουργίας Prompts υποστηρίζουν πλήρως **Αγγλικά** και **Ελληνικά**. Η λογική μετάφρασης μπορεί εύκολα να επεκταθεί στο `translations.py`.
@@ -89,21 +105,36 @@ A powerful Desktop application (built with Python & CustomTkinter) that automate
 
 Aletheo gathers data from multiple sources (RSS Feeds, URLs, GNews, Mediastack, NewsData.io), allows the user to curate the most relevant articles, and leverages Artificial Intelligence (Cloud or Local models) to extract facts, validate them, and provide targeted analysis.
 
+## 🆕 What's new in version 1.2.2
+- **Plausibility Criterion:** The Validity Estimate and Website Evaluation now assess the plausibility of claims, drastically reducing scores for conspiracy theories and absurd articles.
+- **Fake News Isolation:** News with validity below 40% are isolated as independent facts and completely ignored by the AI during the final Summary generation.
+- **Visual Highlighting:** News with a score below 30% are automatically colored red in the app as well as in the final Word/PDF exports!
+- **Tweaks:** Default trust score for new sources is set to 10 (maximum), and the redundant automated cross-check feature was removed for a cleaner UI.
+
 ## 🌟 Key Features
 
 - **Multi-Source Aggregation**: Fetch news from raw URLs (via Web Scraping), RSS feeds, and 3 distinct News APIs (GNews, Mediastack, NewsData.io).
 - **Advanced Filtering**: Filter articles locally by Category, Language (with heuristic text detection), Country, Date, and Keywords (using `+` for MUST, `-` for NOT, and `,` for OR).
 - **Dual AI Support**: Use Google's Gemini API (Cloud) for top-tier results, or Ollama for local, privacy-first, offline execution.
-- **Fact-Checking Engine**: The AI groups the news, strips out bias, and generates a **Validity Estimate (1-10)** based on Cross-referencing, Documentation, Neutrality, and Source Authority.
+- **Fact-Checking Engine**: The AI groups the news, strips out bias, and generates a **weighted Validity Estimate (1-100%)** based on 6 criteria: Cross-referencing, Documentation, Neutrality, Logical Consistency, Source Authority, and Plausibility. Includes a 'Veto' mechanism against clickbaits.
+- **Website Evaluation**: Assess the overall reliability of a specific source by analyzing multiple articles from it for Documentation, Neutrality, Logical Coherence, and Plausibility, generating a final percentage score (1-100%).
+- **Fake News Isolation**: Facts with a Validity Estimate below 40% are isolated, and below 30% are highlighted in red (including exports). The Summary automatically ignores them.
 - **Trust Scoring**: Assign your own custom "Trust Score" to each RSS feed you add, which the AI automatically factors into its final Validity Estimate.
+- **OPML Import & Export**: Easily import and export your source feeds from/to other RSS readers (e.g., Feedly) with a single click.
+- **History System**: Automatic local storage of the last 5 analyses with retrieval and deletion capabilities.
 - **Dynamic UI**: A modern, clean, and fully responsive User Interface using CustomTkinter with:
   - Light/Dark mode support.
   - Collapsible panels for a tidy workspace.
+  - **Drag-and-Drop** support for sorting your RSS sources list.
+  - **Pagination System**: Fast navigation with 20 articles per page for zero lag.
   - **List & Card Views** for news results, including image thumbnails.
+  - Flat drop shadows on news cards for better aesthetics.
+  - Interactive textboxes with **Clickable Links**, citations, and true Bold text rendering.
+- **Local Article View (Reader Mode)**: Read the full text of any article directly within the application, without opening a web browser.
 - **Cancellable AI Tasks**: A dedicated "Cancel" button to stop long-running AI processes.
-- **Configurable Output**: Set your own character limits for Facts, Analysis, and Summary outputs.
+- **Configurable Output**: Set your own character limits for Facts, Analysis, Summary, and Web Scraping per article.
 - **Real-time Feedback**: A live counter shows how many articles are selected and the total word count being sent to the AI.
-- **Rich Export Options**: Instantly export your curated facts, analysis, or summaries to **Word (.docx)**, **PDF (.pdf)**, or directly to your printer.
+- **Rich Export Options**: Instantly export your curated facts, analysis, or summaries to **Word (.docx)**, **PDF (.pdf)**, or directly to your printer. Exports retain Clickable hyperlinks and citations.
 
 ## 🛠️ Installation Requirements
 
@@ -130,7 +161,7 @@ Aletheo gathers data from multiple sources (RSS Feeds, URLs, GNews, Mediastack, 
 4. **Search**: Use the "Source Selection" panel (top-left) to filter by your desired topic and click "Search".
 5. **Select**: Check the boxes next to the articles you find interesting in the right panel.
 6. **Analyze**: In the bottom panel, choose how many topics you want to group them into, select the task (e.g., Facts and Analysis), and hit **Start**.
-7. **Export**: Use the buttons at the bottom right to save the AI's output to PDF or Word!
+7. **History & Export**: Use the History button (bottom right) to recall older analyses or the export buttons to save the AI's output to PDF/Word!
 
 ## 🌍 Languages Supported
 The User Interface and AI Prompting Engine fully support **English** and **Greek** out of the box. The translation logic can be easily extended in `translations.py`.
